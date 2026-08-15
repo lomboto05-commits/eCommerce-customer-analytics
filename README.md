@@ -159,6 +159,14 @@ These recommendations are based on patterns observed within the dataset and shou
 
 ---
 
+### Dataset Source
+
+The dataset was sourced from Kaggle and was prepared and updated for this analysis.
+
+The processed dataset used in the project is included in the repository as:
+
+`ecommerce_dataset_updated.csv`
+
 ## 🤖 AI Assistance
 
 AI assistance was used during development for some coding help and validation.
