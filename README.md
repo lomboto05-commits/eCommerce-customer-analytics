@@ -1,327 +1,164 @@
 # E-Commerce Customer Analytics
 
-## Project Overview
+## 📊 Project Overview
 
-This project analyses an e-commerce dataset to understand customer spending behaviour, product performance, revenue trends, pricing patterns and discount behaviour.
+This project analyses e-commerce customer and purchasing data using **Python and Pandas**.
 
-The analysis was developed using Python and focuses on extracting practical business insights from transactional data.
+The analysis focuses on customer spending, purchasing behaviour, product categories, pricing, discounts, payment methods and revenue patterns.
 
-The project demonstrates the use of data cleaning, exploratory data analysis, aggregation, statistical analysis and data visualisation to investigate an e-commerce dataset.
+The dataset contains **3,660 customer transactions**, with each customer appearing once in the dataset.
 
----
-
-## Business Objectives
-
-The analysis aims to answer questions such as:
-
-- How much do customers typically spend?
-- Which product categories generate the most revenue?
-- How does revenue change over time?
-- How do different discount levels relate to revenue and purchase volume?
-- How are product prices distributed?
-- What relationships exist between original price, discount and final price?
-- How does pricing differ between product categories?
-- Which customer value segments contribute the most revenue?
+The aim of the project is to explore purchasing patterns, identify differences between product categories and customer segments, and produce insights that could support business decision-making.
 
 ---
 
-## Dataset
+## 🛠️ Tools Used
 
-The dataset was sourced from **Kaggle** and contains **3,660 e-commerce transactions from 3,660 unique customers**.
-
-The dataset contains the following key variables:
-
-| Column | Description |
-|---|---|
-| `User_ID` | Customer identifier |
-| `Product_ID` | Product identifier |
-| `Category` | Product category |
-| `Price (Rs.)` | Original product price |
-| `Discount (%)` | Applied discount percentage |
-| `Final_Price(Rs.)` | Price after discount |
-| `Payment_Method` | Payment method used |
-| `Purchase_Date` | Transaction date |
-
-The dataset was prepared and updated for this analysis and is included in the repository as:
-
-`ecommerce_dataset_updated.csv`
-
-### Dataset Source
-
-**Source:** Kaggle
-
-> Note: The analysis uses the dataset as provided and does not claim that observed relationships represent causation.
-
-Each customer appears once in the dataset, meaning repeat-purchase behaviour and customer retention cannot be directly evaluated from the available data.
+- Python
+- Pandas
+- Matplotlib
+- Seaborn
+- Jupyter Notebook
+- GitHub
 
 ---
 
-## Tools & Technologies
+## 📁 Dataset
 
-- **Python**
-- **Pandas**
-- **NumPy**
-- **Matplotlib**
-- **Jupyter Notebook**
-- **Git**
-- **GitHub**
+The analysis uses an e-commerce transaction dataset containing information including:
+
+- Customer ID
+- Purchase Date
+- Product Category
+- Original Price
+- Discount
+- Final Price
+- Payment Method
+
+The dataset contains **3,660 records**.
+
+Data preparation included checking the dataset structure, data types, missing values, duplicate records and date formatting before beginning the analysis.
 
 ---
 
-## Analysis Performed
+## 🔍 Customer Analysis
 
-### 1. Data Exploration
+Customer spending behaviour was analysed using descriptive statistics including:
 
-Initial exploration was performed to understand:
+- Total spending
+- Average spending
+- Median spending
+- Minimum spending
+- Maximum spending
+- Purchase frequency
 
-- Dataset structure
-- Available variables
-- Unique customers
-- Unique products
+Customer segmentation was also explored using spending-based quartiles to compare lower, middle and higher-spending customers.
+
+The dataset contains one transaction per customer, meaning repeat purchasing and customer retention could not be analysed from this dataset.
+
+---
+
+## 💰 Revenue & Category Analysis
+
+Revenue was analysed across product categories to identify differences in:
+
+- Total revenue
+- Number of purchases
+- Average purchase value
+- Pricing
+- Customer spending
+
+The analysis also examined payment methods and their relationship with purchasing activity and revenue.
+
+---
+
+## 🏷️ Discount & Pricing Analysis
+
+The project examines how different discount levels relate to:
+
+- Number of purchases
+- Total revenue
+- Average purchase value
+- Final purchase price
+
+Pricing relationships were also explored by comparing original price, discount percentage and final price.
+
+Correlation analysis was used as a **data validation and exploratory technique** to understand relationships between numerical variables.
+
+Correlation does not establish causation, so these relationships are interpreted as patterns within the dataset rather than proof that one variable causes another.
+
+---
+
+## 📈 Visual Analysis
+
+The project includes visualisations covering areas such as:
+
+- Customer spending
 - Product categories
+- Revenue
 - Payment methods
-- Purchase dates
-- Basic characteristics of the dataset
+- Discounts
+- Pricing
+- Correlations
+
+These visualisations were used alongside the numerical analysis to identify patterns and communicate findings more clearly.
 
 ---
 
-### 2. Customer Analysis
+## 🔎 Key Findings
 
-Customer-level analysis was performed to investigate:
-
-- Total customer spending
-- Average customer spending
-- Median customer spending
-- Minimum customer spending
-- Maximum customer spending
-- Customer purchase frequency
-- Customer value segmentation
-
-Key customer spending statistics:
-
-| Metric | Value |
-|---|---:|
-| Average Customer Spend | Rs. 206.91 |
-| Median Customer Spend | Rs. 199.19 |
-| Minimum Customer Spend | Rs. 5.89 |
-| Maximum Customer Spend | Rs. 496.82 |
-| Unique Customers | 3,660 |
+- The dataset contains **3,660 customer transactions**.
+- Each customer appears once in the dataset, so repeat-customer and retention analysis is not possible.
+- Customer spending varies considerably across the dataset.
+- Revenue and purchasing activity differ across product categories.
+- Discount levels are associated with differences in final purchase prices and revenue.
+- Pricing and category performance show noticeable variation across the dataset.
+- The analysis provides a useful overview of purchasing behaviour within the available transaction data.
 
 ---
 
-### 3. Customer Value Segmentation
+## 💡 Business Recommendations
 
-Customers were divided into four value segments based on spending:
+Based on the analysis, businesses could:
 
-| Segment | Customers | Average Spend | Total Revenue |
-|---|---:|---:|---:|
-| Low Value | 915 | Rs. 54.73 | Rs. 50,071 |
-| Mid-Low Value | 915 | Rs. 151.42 | Rs. 138,553 |
-| Mid-High Value | 915 | Rs. 248.85 | Rs. 227,693 |
-| High Value | 915 | Rs. 372.63 | Rs. 340,961 |
+- Monitor high-performing product categories.
+- Identify higher-spending customer segments.
+- Review discount strategies and their relationship with revenue.
+- Monitor pricing differences across categories.
+- Use customer and category analysis to support targeted commercial decisions.
 
-The **High Value** customer segment generated the largest amount of revenue despite containing the same number of customers as each of the other segments.
-
----
-
-### 4. Product & Category Analysis
-
-Product categories were analysed using:
-
-- Number of purchases
-- Total revenue
-- Average purchase value
-- Average product price
-- Average discount
-- Average final selling price
-
-The analysis identified differences in revenue performance and pricing between product categories.
+These recommendations are based on patterns observed within the dataset and should be considered alongside additional business and customer information.
 
 ---
 
-### 5. Revenue Analysis
+## ⚠️ Limitations
 
-Revenue trends were analysed over time to identify changes in monthly performance.
-
-Monthly revenue was compared to identify periods of stronger and weaker performance.
-
-The available data showed:
-
-- **October** as the highest-revenue month at approximately **Rs. 76,035**
-- **November** as the lowest-revenue month in the available data at approximately **Rs. 51,915**
-
-Revenue was also compared across product categories and customer value segments.
+- Each customer appears only once in the dataset, preventing meaningful retention or repeat-purchase analysis.
+- The dataset does not provide a long-term customer history.
+- Correlation analysis identifies relationships but does not establish causation.
+- Findings are limited to the variables available in the dataset.
+- Additional customer and business context would be required to make stronger commercial conclusions.
 
 ---
 
-### 6. Payment Method Analysis
+## 🎯 Skills Demonstrated
 
-Payment methods were compared based on:
-
-- Number of purchases
-- Total revenue
-- Average purchase value
-
-The available payment methods were:
-
-- Credit Card
-- UPI
-- Debit Card
-- Net Banking
-- Cash on Delivery
-
-Credit Card transactions generated the highest total revenue in the dataset.
+- Python
+- Pandas
+- Data cleaning
+- Exploratory data analysis
+- Customer analysis
+- Revenue analysis
+- Category analysis
+- Pricing analysis
+- Discount analysis
+- Correlation analysis
+- Data visualisation
+- Business insights
+- Jupyter Notebook
 
 ---
 
-### 7. Discount Analysis
+## 🤖 AI Assistance
 
-Discount behaviour was analysed using:
-
-- Revenue by discount level
-- Purchase volume by discount level
-- Average purchase value
-- Discount efficiency
-- Average discount by category
-
-The analysis showed that revenue generally decreased as discount levels increased.
-
-Purchase volumes remained relatively stable across many discount levels, suggesting that larger discounts did not necessarily result in proportionally higher purchase volumes.
-
----
-
-### 8. Pricing Analysis
-
-Product pricing was analysed using:
-
-- Original price distribution
-- Average price by category
-- Average final price by category
-- Relationship between original price and final price
-- Relationship between discount and final price
-
-Product prices were relatively evenly distributed across the available price range of approximately **Rs. 0–500**.
-
----
-
-### 9. Correlation Analysis
-
-A correlation matrix was used to examine relationships between:
-
-- Original price
-- Discount percentage
-- Final price
-
-The analysis identified:
-
-- A very strong positive relationship between original price and final price.
-- A negative relationship between discount percentage and final price.
-- A very weak relationship between original price and discount percentage.
-
-Correlation indicates the strength of an observed relationship but does not establish causation.
-
----
-
-## Key Findings
-
-### Customer Insights
-
-- The dataset contains **3,660 unique customers**.
-- Each customer appears only once.
-- Average customer spend was approximately **Rs. 206.91**.
-- Median customer spend was approximately **Rs. 199.19**.
-- Customer spending ranged from approximately **Rs. 5.89 to Rs. 496.82**.
-- High-value customers generated substantially more revenue than lower-value segments.
-
-### Category Insights
-
-- **Clothing** generated the highest category revenue at approximately **Rs. 115,315**.
-- **Electronics** generated the lowest category revenue at approximately **Rs. 100,462**.
-- Average product prices were relatively consistent across categories.
-- Clothing had the highest average original price at approximately **Rs. 263**.
-- Clothing also had the highest average final selling price.
-
-### Revenue Insights
-
-- Monthly revenue fluctuated throughout the available 2024 period.
-- October recorded the highest monthly revenue.
-- November recorded the lowest monthly revenue in the available data.
-- Further investigation would be required to determine the reasons behind monthly fluctuations.
-
-### Discount Insights
-
-- Revenue generally decreased as discount levels increased.
-- Purchase volumes were relatively stable across most discount levels.
-- Home & Kitchen had the highest average discount at approximately **19.6%**.
-- Clothing had the lowest average discount at approximately **17.9%**.
-- Larger discounts were associated with lower final selling prices and lower total revenue.
-
-### Pricing Insights
-
-- Original price and final price showed a **very strong positive correlation**.
-- Discount percentage had a negative relationship with final price.
-- Product prices were relatively evenly distributed across the available price range.
-
----
-
-## Business Recommendations
-
-Based on the analysis, several potential business actions can be considered.
-
-### 1. Focus on High-Value Customers
-
-The High Value customer segment generates significantly more revenue per customer.
-
-Businesses could consider targeted loyalty programmes, personalised offers and retention strategies for high-value customers.
-
-### 2. Review Discount Strategy
-
-Higher discount levels were associated with lower total revenue.
-
-Rather than relying heavily on large discounts, businesses could investigate targeted promotions that encourage purchases while protecting average selling prices.
-
-### 3. Investigate Clothing Performance
-
-Clothing generated the highest category revenue and had the highest average product price.
-
-Further analysis could investigate which individual clothing products are responsible for this performance.
-
-### 4. Investigate Revenue Declines
-
-The decline in revenue observed in November could be investigated further.
-
-Potential factors could include:
-
-- Seasonal demand
-- Product availability
-- Pricing changes
-- Promotional activity
-- Changes in customer behaviour
-
-Additional data would be required to determine the actual cause.
-
----
-
-## Limitations
-
-There are several limitations to the analysis.
-
-- Each customer appears only once, so repeat-purchase behaviour cannot be evaluated.
-- Customer retention and customer lifetime value cannot be calculated from the available transactions.
-- The dataset does not contain detailed customer demographic information.
-- The dataset does not provide detailed product descriptions.
-- Correlation does not imply causation.
-- The available purchase dates cover only part of 2024.
-- The analysis focuses on the variables available in the dataset.
-
----
-
-## Project Structure
-
-```text
-eCommerce-customer-analytics/
-│
-├── ecommerce_customer_analytics.ipynb
-├── ecommerce_dataset_updated.csv
-├── .gitignore
-└── README.md
+AI assistance was used during development for some coding help and validation.
